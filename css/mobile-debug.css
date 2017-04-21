@@ -1,4 +1,7 @@
-#mobile-debug {
+#mobile-debug { display: none; }
+
+#mobile-debug:target {
+  display: block;
   position: fixed;
   z-index: 999999999;
   top: 5px;

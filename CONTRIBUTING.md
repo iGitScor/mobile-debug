@@ -5,7 +5,7 @@ agree to abide by the [code of conduct](CODE_OF_CONDUCT.md).
 
 Fork, then clone the repo:
 
-`git clone git@github.com:your-username/critical-webpack-plugin.git`
+`git clone git@github.com:your-username/mobile-debug.git`
 
 Make sure the tests pass:
 
@@ -17,7 +17,7 @@ Make your change. Add tests for your change. Make the tests pass:
 
 Push to your fork and [submit a pull request][pr].
 
-[pr]: https://github.com/iGitScor/critical-webpack-plugin/compare/
+[pr]: https://github.com/iGitScor/mobile-debug/compare/
 
 At this point you're waiting on us. We like to at least comment on pull requests
 within three business days (and, typically, one business day). We may suggest
