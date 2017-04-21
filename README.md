@@ -17,11 +17,6 @@ npm i mobile-debug
 <script src="node_modules/mobile-debug/dist/index.js"></script>
 ```
 
-**Style**
-```html
-<link rel="stylesheet" href="node_modules/mobile-debug/dist/mobile-debug.css">
-```
-
 ## Developing
 
 ```shell
