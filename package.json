@@ -1,0 +1,20 @@
+{
+  "name": "mobile-debug",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iGitScor/mobile-debug.git"
+  },
+  "keywords": [],
+  "author": "iGitScor <sebastien.correaud@gmail.com> (http://iscor.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iGitScor/mobile-debug/issues"
+  },
+  "homepage": "https://github.com/iGitScor/mobile-debug#readme"
+}
