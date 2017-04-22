@@ -1,5 +1,11 @@
 # Mobile debugger
 
+[![Build Status][build-badge]][build]
+[![Dependencies][dependencyci-badge]][dependencyci]
+[![dependencies Status][dependencies-badge]][dependencies]
+[![devDependencies Status][devDependencies-badge]][devDependencies]
+[![MIT License][license-badge]][LICENSE]
+
 > Mobile debug UI helper
 
 Show errors and logs in a HTML pane.
@@ -17,6 +23,8 @@ npm i mobile-debug
 <script src="node_modules/mobile-debug/dist/index.js"></script>
 ```
 
+Navigate to `http://your_url/#mobile-debug`
+
 ## Developing
 
 ```shell
@@ -25,6 +33,20 @@ cd mobile-debug/
 ```
 
 Replace `{your fork}` by your github username.
+
+## Build
+
+### Development
+
+```shell
+npm run build
+```
+
+### Production
+
+```shell
+npm run build:prod
+```
 
 ## Contributing
 
@@ -46,3 +68,14 @@ This project follows the [all-contributors](https://github.com/kentcdodds/all-co
 ## Licensing
 
 The code in this project is licensed under MIT license.
+
+[build-badge]: https://img.shields.io/travis/iGitScor/mobile-debug.svg?style=flat-square
+[build]: https://travis-ci.org/iGitScor/mobile-debug
+[dependencyci-badge]: https://dependencyci.com/github/iGitScor/mobile-debug/badge?style=flat-square
+[dependencyci]: https://dependencyci.com/github/iGitScor/mobile-debug
+[dependencies-badge]: https://david-dm.org/iGitScor/mobile-debug/status.svg?style=flat-square
+[dependencies]: https://david-dm.org/iGitScor/mobile-debug
+[devDependencies-badge]: https://david-dm.org/iGitScor/mobile-debug/dev-status.svg?style=flat-square
+[devDependencies]: https://david-dm.org/iGitScor/mobile-debug?type=dev
+[license-badge]: https://img.shields.io/npm/l/mobile-debug.svg?style=flat-square
+[license]: https://github.com/iGitScor/mobile-debug/blob/master/LICENSE

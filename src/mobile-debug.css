@@ -1,5 +1,4 @@
 #mobile-debug { display: none; }
-
 #mobile-debug:target {
   display: block;
   position: fixed;
