@@ -1,6 +1,6 @@
 {
   "name": "mobile-debug",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Mobile debug UI helper",
   "main": "dist/index.js",
   "scripts": {
@@ -13,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/iGitScor/mobile-debug.git"
   },
-  "keywords": [],
+  "keywords": [
+    "mobile",
+    "debug",
+    "console",
+    "error"
+  ],
   "author": "iGitScor <sebastien.correaud@gmail.com> (http://iscor.me)",
   "license": "MIT",
   "bugs": {
@@ -21,6 +26,7 @@
   },
   "homepage": "https://github.com/iGitScor/mobile-debug#readme",
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
     "babel-eslint": "^7.2.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",
@@ -37,5 +43,20 @@
     "rollup-plugin-postcss": "^0.4.1",
     "rollup-plugin-replace": "^1.1.1",
     "rollup-plugin-uglify": "^1.0.2"
-  }
+  },
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "Android > 4",
+    "ChromeAndroid > 57",
+    "FirefoxAndroid > 52",
+    "Blackberry 10",
+    "ExplorerMobile > 10",
+    "iOS > 5",
+    "OperaMobile > 37"
+  ]
 }

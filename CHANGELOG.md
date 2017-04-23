@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com) and this pr
 ### Changed
 - Bundle library with rollup
 - Add code quality indicators
+- Add autoprefixer for style compatibility
 
 ## 0.0.2 - 2017-04-21
 ### Changed

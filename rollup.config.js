@@ -6,6 +6,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
 import postcss from 'rollup-plugin-postcss';
+import autoprefixer from 'autoprefixer';
 
 export default {
   entry: 'src/main.js',
@@ -14,6 +15,9 @@ export default {
   plugins: [
     postcss({
       extensions: ['.css'],
+      plugins: [
+        autoprefixer(),
+      ],
     }),
     resolve({
       jsnext: false,

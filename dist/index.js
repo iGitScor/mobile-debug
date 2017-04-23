@@ -18,7 +18,7 @@
   }
 
   __$styleInject(
-    "#mobile-debug { display: none; }\n#mobile-debug:target {\n  display: block;\n  position: fixed;\n  z-index: 999999999;\n  top: 5px;\n  left: 5px;\n  bottom: 5px;\n  right: 5px;\n  margin: 0px;\n  padding: 10px;\n  color: #333;\n  background-color: rgba(255, 255, 255, 0.95);\n  overflow: scroll;\n  font-family: 'monospace','Lucida Console','Lucida Sans Unicode','Verdana';\n  border-radius: 0px 0px 10px 10px;\n  box-shadow: 0px 0px 10px #000000;\n  transition: .2s\n}\n\n#mobile-debug .title { font-size: 18px; }\n#mobile-debug span, #mobile-debug p { font-size: 12px; margin: 0; }\n#mobile-debug .input { color: #D64141; }\n#mobile-debug .value { color: #404040; }\n#mobile-debug .value.warn { color: #D0A889; }\n",
+    "#mobile-debug { display: none; }\n#mobile-debug:target {\n  display: block;\n  position: fixed;\n  z-index: 999999999;\n  top: 5px;\n  left: 5px;\n  bottom: 5px;\n  right: 5px;\n  margin: 0px;\n  padding: 10px;\n  color: #333;\n  background-color: rgba(255, 255, 255, 0.95);\n  overflow: scroll;\n  font-family: 'monospace','Lucida Console','Lucida Sans Unicode','Verdana';\n  border-radius: 0px 0px 10px 10px;\n  box-shadow: 0px 0px 10px #000000;\n  -webkit-transition: .2s;\n  transition: .2s\n}\n\n#mobile-debug .title { font-size: 18px; }\n#mobile-debug span, #mobile-debug p { font-size: 12px; margin: 0; }\n#mobile-debug .input { color: #D64141; }\n#mobile-debug .value { color: #404040; }\n#mobile-debug .value.warn { color: #D0A889; }\n",
     undefined
   );
 
