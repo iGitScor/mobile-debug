@@ -8,7 +8,26 @@
 
 > Mobile debug UI helper
 
-Show errors and logs in a HTML pane.
+Debugging on mobile is not easy, this tool shows errors and logs in a HTML pane.
+
+## Compatibility
+
+### Style (autoprefixer)
+
+- `last 2 version`
+- `> 1%`
+
+**Browsers:**
+
+![Android][android-badge]
+![Chrome android][chrome-android-badge]
+![Firefox android][firefox-android-badge]
+![Blackberry][blackberry-badge]
+![IE Mobile][ie-mobile-badge]
+![iOS][ios-badge]
+![Opera Mobile][opera-mobile-badge]
+
+_Desktop browsers are not the target for this library_
 
 ## Installing
 
@@ -24,6 +43,10 @@ npm i mobile-debug
 ```
 
 Navigate to `http://your_url/#mobile-debug`
+
+#### Bundler tools
+
+You can import files included in `src` folder in your rollup or webpack build.
 
 ## Developing
 
@@ -79,3 +102,10 @@ The code in this project is licensed under MIT license.
 [devDependencies]: https://david-dm.org/iGitScor/mobile-debug?type=dev
 [license-badge]: https://img.shields.io/npm/l/mobile-debug.svg?style=flat-square
 [license]: https://github.com/iGitScor/mobile-debug/blob/master/LICENSE
+[android-badge]: https://img.shields.io/badge/Android-%3E%204-ff69b4.svg?style=flat-square
+[chrome-android-badge]: https://img.shields.io/badge/Chrome%20android-%3E%2057-ff69b4.svg?style=flat-square
+[firefox-android-badge]: https://img.shields.io/badge/Firefox%20android-%3E%2052-ff69b4.svg?style=flat-square
+[blackberry-badge]: https://img.shields.io/badge/Blackberry-%3E%2010-ff69b4.svg?style=flat-square
+[ie-mobile-badge]: https://img.shields.io/badge/IE%20mobile-%3E%2010-ff69b4.svg?style=flat-square
+[ios-badge]: https://img.shields.io/badge/iOS-%3E%205-ff69b4.svg?style=flat-square
+[opera-mobile-badge]: https://img.shields.io/badge/Opera%20mobile-%3E%2037-ff69b4.svg?style=flat-square
