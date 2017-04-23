@@ -63,7 +63,7 @@
     }
   }
 
-  console.warn = function _warn() {
+  console.warn = function() {
     for (
       var _len = arguments.length, args = Array(_len), _key = 0;
       _key < _len;
@@ -76,7 +76,7 @@
     handleLog(args, ["warn"]);
   };
 
-  console.log = function _log() {
+  console.log = function() {
     for (
       var _len2 = arguments.length, args = Array(_len2), _key2 = 0;
       _key2 < _len2;
@@ -90,14 +90,8 @@
   };
 
   window.onerror = function(message, url, linenumber) {
-    var debugMessage = [
-      "JavaScript error: ",
-      message,
-      " on line ",
-      linenumber,
-      " for ",
-      url
-    ].join("");
+    var debugMessage =
+      "JavaScript error: " + message + " on line " + linenumber + " for " + url;
     console.log(debugMessage);
   };
 })();
