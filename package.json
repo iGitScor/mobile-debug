@@ -1,6 +1,6 @@
 {
   "name": "mobile-debug",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Mobile debug UI helper",
   "main": "dist/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "autoprefixer": "^6.7.7",
     "babel-eslint": "^7.2.2",
     "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
@@ -51,12 +51,12 @@
   "browserslist": [
     "last 2 version",
     "> 1%",
-    "Android > 4",
-    "ChromeAndroid > 57",
-    "FirefoxAndroid > 52",
+    "Android >= 4",
+    "ChromeAndroid >= 57",
+    "FirefoxAndroid >= 52",
     "Blackberry 10",
-    "ExplorerMobile > 10",
-    "iOS > 5",
-    "OperaMobile > 37"
+    "ExplorerMobile >= 10",
+    "iOS >= 5",
+    "OperaMobile >= 37"
   ]
 }

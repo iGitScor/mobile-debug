@@ -12,7 +12,7 @@ Debugging on mobile is not easy, this tool shows errors and logs in a HTML pane.
 
 ## Compatibility
 
-### Style (autoprefixer)
+Use of [autoprefixer](https://github.com/postcss/autoprefixer) for the style and [babel](https://github.com/babel/babel) + [babel-preset-env](https://github.com/babel/babel-preset-env) for the script.
 
 - `last 2 version`
 - `> 1%`
@@ -102,10 +102,10 @@ The code in this project is licensed under MIT license.
 [devDependencies]: https://david-dm.org/iGitScor/mobile-debug?type=dev
 [license-badge]: https://img.shields.io/npm/l/mobile-debug.svg?style=flat-square
 [license]: https://github.com/iGitScor/mobile-debug/blob/master/LICENSE
-[android-badge]: https://img.shields.io/badge/Android-%3E%204-ff69b4.svg?style=flat-square
-[chrome-android-badge]: https://img.shields.io/badge/Chrome%20android-%3E%2057-ff69b4.svg?style=flat-square
-[firefox-android-badge]: https://img.shields.io/badge/Firefox%20android-%3E%2052-ff69b4.svg?style=flat-square
-[blackberry-badge]: https://img.shields.io/badge/Blackberry-%3E%2010-ff69b4.svg?style=flat-square
-[ie-mobile-badge]: https://img.shields.io/badge/IE%20mobile-%3E%2010-ff69b4.svg?style=flat-square
-[ios-badge]: https://img.shields.io/badge/iOS-%3E%205-ff69b4.svg?style=flat-square
-[opera-mobile-badge]: https://img.shields.io/badge/Opera%20mobile-%3E%2037-ff69b4.svg?style=flat-square
+[android-badge]: https://img.shields.io/badge/Android-%3E=%204-ff69b4.svg?style=flat-square
+[chrome-android-badge]: https://img.shields.io/badge/Chrome%20android-%3E=%2057-ff69b4.svg?style=flat-square
+[firefox-android-badge]: https://img.shields.io/badge/Firefox%20android-%3E=%2052-ff69b4.svg?style=flat-square
+[blackberry-badge]: https://img.shields.io/badge/Blackberry-%2010-ff69b4.svg?style=flat-square
+[ie-mobile-badge]: https://img.shields.io/badge/IE%20mobile-%3E=%2010-ff69b4.svg?style=flat-square
+[ios-badge]: https://img.shields.io/badge/iOS-%3E=%205-ff69b4.svg?style=flat-square
+[opera-mobile-badge]: https://img.shields.io/badge/Opera%20mobile-%3E=%2037-ff69b4.svg?style=flat-square

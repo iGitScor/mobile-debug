@@ -39,24 +39,17 @@ function handleLog(logArguments, classes) {
   }
 }
 
-console.warn = function _warn(...args) {
+console.warn = (...args) => {
   baseWarnFunction.apply(console, args);
   handleLog(args, ['warn']);
 };
 
-console.log = function _log(...args) {
+console.log = (...args) => {
   baseLogFunction.apply(console, args);
   handleLog(args, []);
 };
 
 window.onerror = (message, url, linenumber) => {
-  var debugMessage = [
-    'JavaScript error: ',
-    message,
-    ' on line ',
-    linenumber,
-    ' for ',
-    url,
-  ].join('');
+  const debugMessage = `JavaScript error: ${message} on line ${linenumber} for ${url}`;
   console.log(debugMessage);
 };
