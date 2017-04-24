@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com) and this project follows the [Semantic Versioning](http://semver.org) code.
 
+## 0.2.1 - 2017-04-24
+### Added
+- Add MIT license
+
 ## 0.2.0 - 2017-04-23
 ### Changed
 - Use `babel-preset-env` instead of `babel-preset-es2015` for browser compatibility
