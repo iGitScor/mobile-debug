@@ -1,4 +1,8 @@
-# Mobile debugger
+<h1 align="center">
+<img src="https://raw.githubusercontent.com/iGitScor/mobile-debug/master/logo.png" />
+<br />
+Mobile debugger
+</h1>
 
 [![Build Status][build-badge]][build]
 [![Dependencies][dependencyci-badge]][dependencyci]

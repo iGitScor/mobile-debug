@@ -1,6 +1,6 @@
 {
   "name": "mobile-debug",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Mobile debug UI helper",
   "main": "dist/index.js",
   "scripts": {
@@ -25,6 +25,21 @@
     "url": "https://github.com/iGitScor/mobile-debug/issues"
   },
   "homepage": "https://github.com/iGitScor/mobile-debug#readme",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "Android >= 4",
+    "ChromeAndroid >= 57",
+    "FirefoxAndroid >= 52",
+    "Blackberry 10",
+    "ExplorerMobile >= 10",
+    "iOS >= 5",
+    "OperaMobile >= 37"
+  ],
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "babel-eslint": "^7.2.2",
@@ -44,19 +59,7 @@
     "rollup-plugin-replace": "^1.1.1",
     "rollup-plugin-uglify": "^1.0.2"
   },
-  "files": [
-    "dist/*",
-    "src/*"
-  ],
-  "browserslist": [
-    "last 2 version",
-    "> 1%",
-    "Android >= 4",
-    "ChromeAndroid >= 57",
-    "FirefoxAndroid >= 52",
-    "Blackberry 10",
-    "ExplorerMobile >= 10",
-    "iOS >= 5",
-    "OperaMobile >= 37"
-  ]
+  "optionalDependencies": {
+    "ua-npmscript-notifier": "^0.2"
+  }
 }
