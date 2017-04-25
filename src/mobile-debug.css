@@ -20,15 +20,23 @@
   padding: 10px;
 }
 
-#mobile-debug-counter span.warn { background-color: #AC7B1F; }
-#mobile-debug-counter span.error { background-color: #CF3C34; }
+#mobile-debug-counter span.warn {
+  background-color: #AC7B1F;
+}
+
+#mobile-debug-counter span.error {
+  background-color: #CF3C34;
+}
 
 
 /**
  * Console
  */
 
-#mobile-debug { display: none; }
+#mobile-debug {
+  display: none;
+}
+
 #mobile-debug:target {
   display: block;
   position: fixed;
@@ -40,10 +48,11 @@
   margin: 0px;
   padding: 10px;
   color: #333;
-  background-color: rgba(255, 255, 255, 0.95);
+  background: url('../logo.png') rgba(255, 255, 255, 0.95) no-repeat right 10px;
+  background-size: 48px;
   overflow: scroll;
   font-family: 'PT Sans Narrow', sans-serif;
-  box-shadow: 0px 0px 10px #000000;
+  box-shadow: 0px 0px 10px black;
 }
 
 #mobile-debug a {
@@ -55,7 +64,9 @@
   display: inline-block;
 }
 
-#mobile-debug .title { font-size: 20px; }
+#mobile-debug .title {
+  font-size: 20px;
+}
 
 #mobile-debug span,
 #mobile-debug p {
@@ -74,7 +85,9 @@
   margin-bottom: 10px;
 }
 
-#mobile-debug .warn.warn { color: #D0A889; }
+#mobile-debug .warn.warn {
+  color: #D0A889;
+}
 
 #mobile-debug .error.error {
   color: #CF3C34;

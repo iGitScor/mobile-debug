@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com) and this project follows the [Semantic Versioning](http://semver.org) code.
 
+## 0.3.0 - 2017-04-25
+### Changed
+- Global dependencies are now included
+- Minify style
+- Inline logo in debug panel
+
 ## 0.2.2 - 2017-04-25
 ### Added
 - Demo structure
