@@ -6,7 +6,11 @@ import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
 import postcss from 'rollup-plugin-postcss';
+
+// Postcss plugins
 import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import postcssurl from 'postcss-url';
 
 export default {
   entry: 'src/main.js',
@@ -16,27 +20,39 @@ export default {
     postcss({
       extensions: ['.css'],
       plugins: [
+        postcssurl({
+          url: 'inline',
+        }),
+
+        cssnano(),
+
         autoprefixer(),
       ],
     }),
+
     resolve({
       jsnext: false,
       main: true,
       browser: true,
     }),
+
     commonjs(),
+
     eslint({
       exclude: [
         'node_modules/**',
         '**/*.css',
       ],
     }),
+
     babel({
       exclude: 'node_modules/**',
     }),
+
     replace({
       ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
     }),
+
     (process.env.NODE_ENV === 'production' && uglify()),
   ],
 };
