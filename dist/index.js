@@ -18,7 +18,7 @@
   }
 
   __$styleInject(
-    "#mobile-debug { display: none; }\n#mobile-debug:target {\n  display: block;\n  position: fixed;\n  z-index: 999999999;\n  top: 5px;\n  left: 5px;\n  bottom: 5px;\n  right: 5px;\n  margin: 0px;\n  padding: 10px;\n  color: #333;\n  background-color: rgba(255, 255, 255, 0.95);\n  overflow: scroll;\n  font-family: 'monospace','Lucida Console','Lucida Sans Unicode','Verdana';\n  border-radius: 0px 0px 10px 10px;\n  box-shadow: 0px 0px 10px #000000;\n  -webkit-transition: .2s;\n  transition: .2s\n}\n\n#mobile-debug .title { font-size: 18px; }\n#mobile-debug span, #mobile-debug p { font-size: 12px; margin: 0; }\n#mobile-debug .input { color: #D64141; }\n#mobile-debug .value { color: #404040; }\n#mobile-debug .value.warn { color: #D0A889; }\n",
+    "@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');\n\n/**\n * Counter\n */\n\n#mobile-debug-counter {\n  position: fixed;\n  z-index: 888888888;\n  bottom: 0;\n  right: 0;\n  background-color: #31363F;\n  color: #D9DCE1;\n  display: inline-block;\n  font-family: sans-serif;\n}\n\n#mobile-debug-counter span {\n  display: inline-block;\n  padding: 10px;\n}\n\n#mobile-debug-counter span.warn { background-color: #AC7B1F; }\n#mobile-debug-counter span.error { background-color: #CF3C34; }\n\n\n/**\n * Console\n */\n\n#mobile-debug { display: none; }\n#mobile-debug:target {\n  display: block;\n  position: fixed;\n  z-index: 999999999;\n  top: 5px;\n  left: 5px;\n  bottom: 5px;\n  right: 5px;\n  margin: 0px;\n  padding: 10px;\n  color: #333;\n  background-color: rgba(255, 255, 255, 0.95);\n  overflow: scroll;\n  font-family: 'PT Sans Narrow', sans-serif;\n  box-shadow: 0px 0px 10px #000000;\n}\n\n#mobile-debug a {\n  text-decoration: none;\n  border: 1px solid black;\n  padding: 2px;\n  color: black;\n  margin-bottom: 5px;\n  display: inline-block;\n}\n\n#mobile-debug .title { font-size: 20px; }\n\n#mobile-debug span,\n#mobile-debug p {\n  font-size: 16px;\n  margin: 0;\n}\n\n#mobile-debug p.input {\n  color: #417ad6;\n  font-weight: bold;\n  font-size: 14px;\n}\n\n#mobile-debug .value {\n  color: #404040;\n  margin-bottom: 10px;\n}\n\n#mobile-debug .warn.warn { color: #D0A889; }\n\n#mobile-debug .error.error {\n  color: #CF3C34;\n  font-weight: bold;\n}\n",
     undefined
   );
 
@@ -28,8 +28,16 @@
 
   var node = document.createElement("div");
   node.id = "mobile-debug";
-  node.innerHTML = '<p class="title">Debug console</p>';
+  node.innerHTML =
+    '<p><a href="#">&times; Close</a></p><p class="title">Debug console</p>';
   document.body.appendChild(node);
+
+  var button = document.createElement("a");
+  button.href = "#mobile-debug";
+  button.id = "mobile-debug-counter";
+  button.innerHTML =
+    '<span class="error">X</span><span class="warn">X</span><span>X</span>';
+  document.body.appendChild(button);
 
   /**
  ********** Console handler **********
@@ -45,14 +53,15 @@
       var now = new Date();
 
       var debugDate = document.createElement("p");
-      debugDate.innerHTML = now;
+      debugDate.innerHTML =
+        now.getHours() + "h" + ("0" + now.getMinutes()).slice(-2);
       debugDate.classList.add("input");
       document.getElementById("mobile-debug").appendChild(debugDate);
 
       var debugValue = document.createElement("p");
       debugValue.innerHTML = args[iterator];
       debugValue.classList.add("value");
-      Array.foreach(classes, function(cssClass) {
+      classes.forEach(function(cssClass) {
         debugValue.classList.add(cssClass);
       });
       document.getElementById("mobile-debug").appendChild(debugValue);
@@ -91,7 +100,12 @@
 
   window.onerror = function(message, url, linenumber) {
     var debugMessage =
-      "JavaScript error: " + message + " on line " + linenumber + " for " + url;
+      '<span class="error">&times;</span> JavaScript error: ' +
+      message +
+      " on line " +
+      linenumber +
+      " for " +
+      url;
     console.log(debugMessage);
   };
 })();

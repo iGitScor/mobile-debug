@@ -1,0 +1,51 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+main {
+  padding: 5%;
+  font-family: 'Dancing Script', sans-serif;
+}
+
+main ul {
+  list-style-type: square;
+  color: #e50914;
+  font-size: 20px;
+}
+
+main ul span {
+  color: #131313;
+}
+
+.em {
+  color: #e50914;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/** Elements **/
+.not-played {
+  display: none;
+}
