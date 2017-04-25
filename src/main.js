@@ -9,8 +9,14 @@ import './mobile-debug.css';
 
 const node = document.createElement('div');
 node.id = 'mobile-debug';
-node.innerHTML = '<p class="title">Debug console</p>';
+node.innerHTML = '<p><a href="#">&times; Close</a></p><p class="title">Debug console</p>';
 document.body.appendChild(node);
+
+const button = document.createElement('a');
+button.href = '#mobile-debug';
+button.id = 'mobile-debug-counter';
+button.innerHTML = '<span class="error">X</span><span class="warn">X</span><span>X</span>';
+document.body.appendChild(button);
 
 /**
  ********** Console handler **********
@@ -25,14 +31,14 @@ function handleLog(logArguments, classes) {
     const now = new Date();
 
     const debugDate = document.createElement('p');
-    debugDate.innerHTML = now;
+    debugDate.innerHTML = `${now.getHours()}h${`0${now.getMinutes()}`.slice(-2)}`;
     debugDate.classList.add('input');
     document.getElementById('mobile-debug').appendChild(debugDate);
 
     const debugValue = document.createElement('p');
     debugValue.innerHTML = args[iterator];
     debugValue.classList.add('value');
-    Array.foreach(classes, (cssClass) => {
+    classes.forEach((cssClass) => {
       debugValue.classList.add(cssClass);
     });
     document.getElementById('mobile-debug').appendChild(debugValue);
@@ -50,6 +56,6 @@ console.log = (...args) => {
 };
 
 window.onerror = (message, url, linenumber) => {
-  const debugMessage = `JavaScript error: ${message} on line ${linenumber} for ${url}`;
+  const debugMessage = `<span class="error">&times;</span> JavaScript error: ${message} on line ${linenumber} for ${url}`;
   console.log(debugMessage);
 };
