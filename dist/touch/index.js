@@ -102,10 +102,21 @@
     console.log(debugMessage);
   };
 
-  var button = document.createElement("a");
-  button.href = "#mobile-debug";
-  button.id = "mobile-debug-counter";
-  button.innerHTML =
-    '<span class="error">X</span><span class="warn">X</span><span>X</span>';
-  document.body.appendChild(button);
+  var numberOfTap = 3;
+  var counterTap = 1;
+
+  document.body.addEventListener("touchend", function() {
+    if (counterTap < numberOfTap) {
+      counterTap += 1;
+      setTimeout(function() {
+        counterTap = 1;
+      }, 1500);
+
+      return false;
+    }
+
+    window.location.hash = "mobile-debug";
+
+    return true;
+  });
 })();

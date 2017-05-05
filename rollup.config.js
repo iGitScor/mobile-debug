@@ -1,3 +1,8 @@
+/* eslint-env node */
+
+// Node plugins
+import path from 'path';
+
 // Rollup plugins
 import babel from 'rollup-plugin-babel';
 import eslint from 'rollup-plugin-eslint';
@@ -12,9 +17,17 @@ import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import postcssurl from 'postcss-url';
 
+// Rollup configuration
+const libEntry = process.env.version || 'counter';
+const buildEntry = path.resolve(`src/lib/${libEntry}.js`);
+
+const buildName = process.env.version ? `${process.env.version}/` : '';
+const libName = process.env.NODE_ENV === 'production' ? 'index.min.js' : 'index.js';
+const buildDestination = path.resolve(`dist/${buildName}/${libName}`);
+
 export default {
-  entry: 'src/main.js',
-  dest: 'dist/index' + (process.env.NODE_ENV === 'production' ? '.min' : '') + '.js',
+  entry: buildEntry,
+  dest: buildDestination,
   format: 'iife',
   plugins: [
     postcss({
