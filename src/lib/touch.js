@@ -1,19 +1,17 @@
 import '../core/main';
 
-const numberOfTap = 3;
+const numberOfTap = 2;
 let counterTap = 1;
 
-document.body.addEventListener('touchend', () => {
-  if (counterTap < numberOfTap) {
-    counterTap += 1;
-    setTimeout(() => {
-      counterTap = 1;
-    }, 1500);
-
-    return false;
+document.body.addEventListener('touchstart', (event) => {
+  if (event.touches.length > 1) {
+    if (counterTap < numberOfTap) {
+      counterTap += 1;
+      setTimeout(() => {
+        counterTap = 1;
+      }, 1000);
+    } else {
+      window.location.hash = 'mobile-debug';
+    }
   }
-
-  window.location.hash = 'mobile-debug';
-
-  return true;
 });

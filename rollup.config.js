@@ -13,7 +13,6 @@ import uglify from 'rollup-plugin-uglify';
 import postcss from 'rollup-plugin-postcss';
 
 // Postcss plugins
-import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import postcssurl from 'postcss-url';
 
@@ -37,9 +36,9 @@ export default {
           url: 'inline',
         }),
 
-        cssnano(),
-
-        autoprefixer(),
+        cssnano({
+          zindex: false,
+        }),
       ],
     }),
 
