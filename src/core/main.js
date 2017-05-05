@@ -50,8 +50,6 @@ console.log = (...args) => {
 };
 
 window.onerror = (message, url, linenumber) => {
-  const debugMessage = `<span class="error">&times;</span>
-    JavaScript error: ${message} on line ${linenumber} for ${url}
-  `;
+  const debugMessage = `<span class="error">&times;</span>JavaScript error: ${message} on line ${linenumber} for ${url}`;
   console.log(debugMessage);
 };

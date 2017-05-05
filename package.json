@@ -55,6 +55,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
+    "npm-run-all": "^4.0.2",
     "postcss-url": "^6.0.4",
     "prettier": "^1.2.2",
     "rollup": "^0.41.6",

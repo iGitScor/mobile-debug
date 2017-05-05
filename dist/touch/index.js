@@ -93,13 +93,12 @@
 
   window.onerror = function(message, url, linenumber) {
     var debugMessage =
-      '<span class="error">&times;</span>\n    JavaScript error: ' +
+      '<span class="error">&times;</span>JavaScript error: ' +
       message +
       " on line " +
       linenumber +
       " for " +
-      url +
-      "\n  ";
+      url;
     console.log(debugMessage);
   };
 
