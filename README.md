@@ -5,6 +5,7 @@ Mobile debugger
 </h1>
 
 [![Build Status][build-badge]][build]
+![Browserstack build status][browserstack-badge]
 [![Dependencies][dependencyci-badge]][dependencyci]
 [![dependencies Status][dependencies-badge]][dependencies]
 [![devDependencies Status][devDependencies-badge]][devDependencies]
@@ -32,6 +33,13 @@ Use of [autoprefixer](https://github.com/postcss/autoprefixer) for the style and
 ![Opera Mobile][opera-mobile-badge]
 
 _Desktop browsers are not the target for this library_
+
+<h3>
+  Browserstack
+  <img src="https://github.com/browserstack.png" alt="browserstack" width="48" height="48" />
+</h3>
+
+Use of [browserstack](https://www.browserstack.com) [automated test](https://www.browserstack.com/automate) to check compatibility.
 
 ## Installing
 
@@ -98,6 +106,7 @@ The code in this project is licensed under MIT license.
 
 [build-badge]: https://img.shields.io/travis/iGitScor/mobile-debug.svg?style=flat-square
 [build]: https://travis-ci.org/iGitScor/mobile-debug
+[browserstack-badge]: https://www.browserstack.com/automate/badge.svg?badge_key=
 [dependencyci-badge]: https://dependencyci.com/github/iGitScor/mobile-debug/badge?style=flat-square
 [dependencyci]: https://dependencyci.com/github/iGitScor/mobile-debug
 [dependencies-badge]: https://david-dm.org/iGitScor/mobile-debug/status.svg?style=flat-square
