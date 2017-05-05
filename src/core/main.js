@@ -1,4 +1,4 @@
-import './mobile-debug.css';
+import '../display/mobile-debug.css';
 
 // eslint-disable-next-line
 'use strict';
@@ -11,12 +11,6 @@ const node = document.createElement('div');
 node.id = 'mobile-debug';
 node.innerHTML = '<p><a href="#">&times; Close</a></p><p class="title">Debug console</p>';
 document.body.appendChild(node);
-
-const button = document.createElement('a');
-button.href = '#mobile-debug';
-button.id = 'mobile-debug-counter';
-button.innerHTML = '<span class="error">X</span><span class="warn">X</span><span>X</span>';
-document.body.appendChild(button);
 
 /**
  ********** Console handler **********
@@ -56,6 +50,8 @@ console.log = (...args) => {
 };
 
 window.onerror = (message, url, linenumber) => {
-  const debugMessage = `<span class="error">&times;</span> JavaScript error: ${message} on line ${linenumber} for ${url}`;
+  const debugMessage = `<span class="error">&times;</span>
+    JavaScript error: ${message} on line ${linenumber} for ${url}
+  `;
   console.log(debugMessage);
 };

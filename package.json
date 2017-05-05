@@ -1,13 +1,17 @@
 {
   "name": "mobile-debug",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Mobile debug UI helper",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rollup -c",
-    "build:prod": "NODE_ENV=production rollup -c",
-    "postbuild": "prettier --write dist/index.js",
-    "test": "eslint src/*.js"
+    "build": "npm-run-all --parallel build:* build:prod:*",
+    "build:default": "rollup -c",
+    "build:prod:default": "NODE_ENV=production rollup -c",
+    "postbuild:default": "prettier --write dist/index.js",
+    "build:touch": "rollup -c --environment version:touch",
+    "build:prod:touch": "NODE_ENV=production rollup -c --environment version:touch",
+    "postbuild:touch": "prettier --write dist/touch/index.js",
+    "test": "eslint src/**/*.js"
   },
   "repository": {
     "type": "git",
