@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com) and this project follows the [Semantic Versioning](http://semver.org) code.
 
+## 0.4.2 - 2017-05-09
+### Changed
+- Fix inlined logo
+
 ## 0.4.1 - 2017-05-05
 ### Changed
 - Touch trigger (2 fingers - 2 times)
