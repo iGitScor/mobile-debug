@@ -48,7 +48,7 @@
   margin: 0px;
   padding: 10px;
   color: #333;
-  background: url('../logo.png') rgba(255, 255, 255, 0.95) no-repeat right 10px;
+  background: url('../../logo.png') rgba(255, 255, 255, 0.95) no-repeat right 10px;
   background-size: 48px;
   overflow: scroll;
   font-family: 'PT Sans Narrow', sans-serif;
