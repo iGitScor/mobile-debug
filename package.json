@@ -12,9 +12,9 @@
     "build:prod:touch": "NODE_ENV=production rollup -c --environment version:touch",
     "postbuild:touch": "prettier --write dist/touch/index.js",
     "preserve": "rimraf tests/src && cpy 'demo/**/*.*' tests/src && cpy 'dist/**/*.js' tests/src --parents",
-    "serve": "http-server ./tests/src -p 8091",
+    "serve": "http-server ./tests/src -p 8091 &",
     "pretest": "eslint 'src/**/*.js'",
-    "test": "nightwatch -c tests/config/browserstack.conf.js"
+    "test": "npm run serve && nightwatch -c tests/config/browserstack.conf.js"
   },
   "repository": {
     "type": "git",
