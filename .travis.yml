@@ -13,11 +13,9 @@ cache:
     - node_modules
 
 addons:
-  browserstack:
-    forcelocal: true
+  browserstack
 
 before_script:
-  - BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY
   - npm run serve &
 
 script:
