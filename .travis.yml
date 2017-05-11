@@ -11,3 +11,7 @@ cache:
     - $HOME/.npm
     - $HOME/.yarn-cache
     - node_modules
+
+addons:
+  browserstack:
+    forcelocal: true
