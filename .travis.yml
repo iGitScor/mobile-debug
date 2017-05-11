@@ -15,3 +15,11 @@ cache:
 addons:
   browserstack:
     forcelocal: true
+
+before_script:
+  - BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY
+  - npm run serve &
+
+script:
+  - npm run test
+  - pkill node
