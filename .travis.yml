@@ -3,11 +3,24 @@ sudo: false
 language: node_js
 node_js:
   - stable
-  - "6"
+  - '6'
 
 cache:
-  yarn: true
   directories:
     - $HOME/.npm
     - $HOME/.yarn-cache
     - node_modules
+
+addons:
+  sauce_connect: true
+
+before_script:
+  - npm run serve &
+
+script:
+  - npm run test
+  - pkill node
+
+env:
+  global:
+    secure: jufRO0/Ggmq9g+aZoHQNbNxuNWPu2mNl3W2lkL9gLHbLfImJHoeHlwJYOUnw+abT2qd6dQJl4MFcdXGw/M2DjC/n2bzteUBExTt0M4ge39ERjEeDsxRQGFR9mD4wUJ/tru3UYbqfD/EYzGtqtworBF6VoHKDeaEHIGJFW9FhnWkvruNMGl7Kcv6lpbSLRBkh7sjzsJl2WRcFDq1GJkJL2c9xPYUaqwZx87dN5eaFQqfyMPtSJrmJ9ZUyrput3LHomqwsXPGZbSZcpvxlxKd/ndem/ZgKJg1VgqehZwR+FyCOOIeZS/X+rwC7w56ca9/0k722BaqBJ5Ff5/t28hiz8pUraqZS664J5ypGTE2juQE0NjKRZ91vmC+d3xKtISJ/MZFDGGrnimsxrYxXlA/XT+LUwsG2OhPqfYlvUnXgRNttTzxiOzjMbxtyZG8BoKcvfnp6RfxcDJupzz+vjdTmn0N9uqM4xs+th3CnkqIV6Zbbop7GnFYu7caYeveCsJ5pwf2wGPuQKP+dAxFtBhbVFJLxrMUV2+zVDZBIKaxPTQTTlPvnXW/992sALCleDqvbsNpAqgcDJqTyD//g7n5hS8UQIpadVQbkQqKcSCUDPixVycFpRPnyqgRbjJNMSO0GYZj5Xlu4krbJVBXJ6NCSiOQW8UoW0tW32br4xLBUHtc=
