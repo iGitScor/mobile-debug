@@ -13,6 +13,7 @@
     "postbuild:touch": "prettier --write dist/touch/index.js",
     "preserve": "rimraf tests/src && cpy 'demo/**/*.*' tests/src && cpy 'dist/**/*.js' tests/src --parents",
     "serve": "http-server ./tests/src -p 8091",
+    "serve:browserstack": "node tests/browserstack/local.js",
     "pretest": "eslint 'src/**/*.js'",
     "test": "nightwatch -c tests/config/browserstack.conf.js"
   },
@@ -51,6 +52,7 @@
     "babel-eslint": "^7.2.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.4.0",
+    "browserstack-local": "^1.3.0",
     "cpy-cli": "^1.0.1",
     "cssnano": "^3.10.0",
     "dotenv": "^4.0.0",

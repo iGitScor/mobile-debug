@@ -28,6 +28,7 @@ const browserstackConfig = {
       desiredCapabilities: {
         'browserstack.user': process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
         'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
+        'browserstack.local': true,
         browser: 'chrome',
       },
     },
