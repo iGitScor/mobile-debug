@@ -1,9 +1,13 @@
 /* eslint-env node */
 
+const sauce = require('../saucelabs/sauce');
+
 module.exports = {
   before: (browser) => {
     this.data = browser.globals;
   },
+
+  tearDown: sauce,
 
   'Default version': (browser) => {
     browser
