@@ -104,9 +104,9 @@ This project follows the [all-contributors](https://github.com/kentcdodds/all-co
 
 The code in this project is licensed under MIT license.
 
-[build-badge]: https://img.shields.io/travis/iGitScor/mobile-debug.svg?style=flat-square
+[build-badge]: https://img.shields.io/travis/iGitScor/mobile-debug.svg?style=flat-square&branch=master
 [build]: https://travis-ci.org/iGitScor/mobile-debug
-[browserstack-badge]: https://www.browserstack.com/automate/badge.svg?badge_key=
+[browserstack-badge]: https://www.browserstack.com/automate/badge.svg?badge_key=a3VVQ2YvNlFKQ284WFNnMXBmNE5TN3BNNXoyNFVnblU0dzVTbDVjWXUrZz0tLVFGdXEyQ3FIdlI2Z2duK2l0eTJPSVE9PQ==--55dca2a56320ab82144631c15ded4a65a0cc1822%
 [dependencyci-badge]: https://dependencyci.com/github/iGitScor/mobile-debug/badge?style=flat-square
 [dependencyci]: https://dependencyci.com/github/iGitScor/mobile-debug
 [dependencies-badge]: https://david-dm.org/iGitScor/mobile-debug/status.svg?style=flat-square
