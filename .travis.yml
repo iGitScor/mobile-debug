@@ -3,11 +3,25 @@ sudo: false
 language: node_js
 node_js:
   - stable
-  - "6"
+  - '6'
 
 cache:
-  yarn: true
   directories:
     - $HOME/.npm
     - $HOME/.yarn-cache
     - node_modules
+
+addons:
+  browserstack:
+    username:
+      secure: "BGUcQQy1oXNY5d3qmd+6hCSvfYgAeSkrDCyzhL4FDyru9oEr4m339sixWNd5XzWcPJzQfloYZb1vP000nUwzF/D1geJ3u/BJwcjL1js9KI3rjFG43lRa5M2PpIa4qyXgXb3IPLdTkuAZxkqrXCBmKtBMzvoNCgnotk2oNF4jaPOXdlsf4HtHyvxc0qsVUm871A5Zjfj0ExTA9GYCCDMBRyn4nrE6vE167W8wpcesRg1ZKCXi+IX63pxX83d74Xd6MSKAE7cL67TvWVZbEUuK9KpVI3JNS0P54e7bz6/kwAKwHhAoa8CoM2tNp6/RyKK1IMJRGGfcn3pgD/JRNo7JGoljK0dCbQBpyNK7TsHnHQRLiBxV34pzX8v1wz1dLk1kS9PlZjT8D5OLz7YEy5y5DRrA1BEcz/ADTMgcM3C6hyfbf3/N7L0xKjV5ACLnQ5oYmZSambAMp1qPqZgUbcEidelyPJuoScY0uNbgJMsL45L64VTKTi0B0OTSVggCSVg3zs1C0Y6yo2FFqXhW/XzgPoCGGUg9obd2rWyLwGCKukJ7B269PEMg4w5GbUOu1hEzQnuFguYNs22Zt5nVFGg+ht2zUuPAnsK6sMDWKxojC9E/XWzUr0a80RuFDYviNvlEnm3Kb0vIsliguk3q1KlsO1V/wb+80KoZMSXdQ2ihcSU="
+    access_key:
+      secure: "qC/blT/t2riqyhv/NBzVZgQxbKSoLFXqRSc44e/K6moYrPrlsh/RwlsEu6YyH9lCCgTaV8ubLNxamHqyM+UyQ1YrBQQGAHm7AznrepUqjD7o0XPhJxNbGPNsA5mcbm2/DsE0d9AV4+sQZYWlgLuBJhZBHQVCtIuQXt+7ZyM5uDxXK4nczSsljy6PSn19N7bBhg2IUUmzAZ4FsNCmfM6kOdEUttvPSt2Z5phF8q+FXWip5U6PrmG3ZzJPwDaF7Cae89h+Pru55xpq7/avXSlB0C3iMCfA8PicuNOuz/Ee1hDb4VHV1iCRXwGB1/dBkzsOz4zq6bBnRk6sELtMqw9TMEjCtdJSk4U8A1NREARXzOSvh7/Cpazg1W4M7sIQc/RcyojD9kyd8qKME53atcrRKM8zDcXi3IiLXnn6pVAqBOjROKw3Sm2nMEQWgtCM0xr82EXKbdHmJgtr4v3zs8w6QAa+6uJFiacqXGsxFgccAbozjbr8LFP7eCJMX2csbB0NUgLDWmfq2BhYQILj0W3l7XwRLOq02hW8js2p+l9FeIlurwx5/D15e2t6Vvg9tUSHr2f8J9b5/jiG5oQPtFSeyUQuWWdOLyEyBQcW1o7AcLRNj+C2Yy/JBEGatp96vIKb/XVybrIZHX0TCsBVWCO7SCMlyV/FUcnPLzLqTkw1Erc="
+    # forcelocal: true
+
+before_script:
+  - npm run serve &
+
+script:
+  - npm run test
+  - pkill node

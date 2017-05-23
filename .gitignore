@@ -1,1 +1,8 @@
+.env
+
+# NodeJS
 /node_modules
+
+# Tests
+/tests/reports
+/tests/src
