@@ -23,11 +23,13 @@ const browserstackConfig = {
     default: {
       selenium_host: host,
       selenium_port: port,
-      launch_url: 'http://localhost:8091',
+      launch_url: 'http://127.0.0.1:8091',
       globals: require('./env/browserstack'),
       desiredCapabilities: {
+        build: 'nightwatch-browserstack',
         'browserstack.user': process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
         'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
+        'browserstack.debug': true,
         'browserstack.local': true,
         browser: 'chrome',
       },
