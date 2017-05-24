@@ -18,7 +18,7 @@ import postcssurl from 'postcss-url';
 
 // Rollup configuration
 const libEntry = process.env.version || 'counter';
-const buildEntry = path.resolve(`src/lib/${libEntry}.js`);
+const buildEntry = path.resolve(`src/versions/${libEntry}.js`);
 
 const buildName = process.env.version ? `${process.env.version}/` : '';
 const libName = process.env.NODE_ENV === 'production' ? 'index.min.js' : 'index.js';

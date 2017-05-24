@@ -16,6 +16,10 @@ rules:
   no-mixed-operators:
     - 'error'
     - groups:  [["&", "|", "^", "~", "<<", ">>", ">>>"], ["&&", "||"]]
+  no-extend-native:
+    - 'error'
+    - exceptions:
+      - Object
   vars-on-top: 0
   strict: 0
   comma-dangle: 0
