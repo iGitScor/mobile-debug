@@ -1,6 +1,6 @@
 /**
  ********** Console handler **********
- **/
+ */
 
 const baseLogFunction = console.log;
 const baseWarnFunction = console.warn;
