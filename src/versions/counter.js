@@ -1,4 +1,4 @@
-import '../core/main';
+import '../lib/core';
 
 const button = document.createElement('a');
 button.href = '#mobile-debug';

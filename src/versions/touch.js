@@ -1,4 +1,4 @@
-import '../core/main';
+import '../lib/core';
 
 const numberOfTap = 2;
 let counterTap = 1;
