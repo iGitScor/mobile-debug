@@ -1,5 +1,6 @@
 (function() {
   "use strict";
+
   function __$styleInject(css, returnValue) {
     if (typeof document === "undefined") {
       return returnValue;
@@ -8,12 +9,13 @@
     var head = document.head || document.getElementsByTagName("head")[0];
     var style = document.createElement("style");
     style.type = "text/css";
+    head.appendChild(style);
+
     if (style.styleSheet) {
       style.styleSheet.cssText = css;
     } else {
       style.appendChild(document.createTextNode(css));
     }
-    head.appendChild(style);
     return returnValue;
   }
 
@@ -23,9 +25,8 @@
     var _arguments = arguments;
 
     var _loop = function _loop(debugIndex) {
-      var entry = _arguments.length <= debugIndex
-        ? undefined
-        : _arguments[debugIndex];
+      var entry =
+        _arguments.length <= debugIndex ? undefined : _arguments[debugIndex];
 
       var debugDate = document.createElement("p");
       debugDate.innerHTML = entry.date;
@@ -49,16 +50,15 @@
 
   /**
  ********** Console handler **********
- **/
+ */
 
   var baseLogFunction = console.log;
   var baseWarnFunction = console.warn;
   var baseErrorFunction = console.error;
 
   function handleLog(logArguments) {
-    var classes = arguments.length > 1 && arguments[1] !== undefined
-      ? arguments[1]
-      : [];
+    var classes =
+      arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
 
     var args = Array.prototype.slice.call(logArguments);
     for (var iterator = 0; iterator < args.length; iterator += 1) {
@@ -110,6 +110,10 @@
     baseLogFunction.apply(console, args);
     handleLog(args);
   };
+
+  /**
+ ********** Error handler **********
+ */
 
   window.onerror = function(message, url, linenumber) {
     var debugMessage =

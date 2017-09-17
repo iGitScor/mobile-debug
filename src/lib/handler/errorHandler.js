@@ -1,6 +1,6 @@
 /**
  ********** Error handler **********
- **/
+ */
 
 import handleLog from './logHandler';
 
